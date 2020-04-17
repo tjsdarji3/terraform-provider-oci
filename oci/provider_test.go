@@ -20,6 +20,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	sdkMeta "github.com/hashicorp/terraform-plugin-sdk/meta"
 	"github.com/hashicorp/terraform-plugin-sdk/terraform"
 	oci_common "github.com/oracle/oci-go-sdk/common"
 	"github.com/stretchr/testify/assert"
@@ -411,7 +412,7 @@ func providerConfigTest(t *testing.T, disableRetries bool, skipRequiredField boo
 	// If no ConfigFunc use ProviderConfig
 	if configureProviderFn == nil {
 		configureProviderFn = ProviderConfig
-		userAgent = fmt.Sprintf(userAgentFormatter, oci_common.Version(), runtime.Version(), runtime.GOOS, runtime.GOARCH, terraform.VersionString(), terraformCLIVersion, defaultUserAgentProviderName, Version)
+		userAgent = fmt.Sprintf(userAgentFormatter, oci_common.Version(), runtime.Version(), runtime.GOOS, runtime.GOARCH, sdkMeta.SDKVersionString(), terraformCLIVersion, defaultUserAgentProviderName, Version)
 
 	}
 	client, err := configureProviderFn(d)
