@@ -5,8 +5,8 @@ package oci
 import (
 	"context"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/helper/validation"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/validation"
 	oci_resourcemanager "github.com/oracle/oci-go-sdk/resourcemanager"
 )
 

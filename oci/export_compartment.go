@@ -13,7 +13,7 @@ import (
 	"github.com/fatih/color"
 
 	"github.com/hashicorp/hcl/hcl/fmtcmd"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	oci_common "github.com/oracle/oci-go-sdk/common"
 	oci_identity "github.com/oracle/oci-go-sdk/identity"
 )
